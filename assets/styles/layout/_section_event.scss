@@ -1,0 +1,126 @@
+.event{
+    display: grid;
+    grid-template-columns: 57% 43%;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 60%;
+    margin: 25px auto;
+    color: $white;
+    h3{
+        font-size: 2.0rem;
+        line-height: 1.0rem;
+    }
+    .fork-and-spoon{
+        margin: 20px 0 ;
+    }
+    button{
+        border: 0;
+        font-family: $roboto;
+        font-weight: 600;
+        background-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.3rem;
+    }
+}
+.head_event{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.event1{
+    grid-column-start: 1;
+    grid-column-end: 2;  
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    .bg-date{
+        background: url('/assets/img/event-01.jpg') center/cover no-repeat;
+        object-fit: fill;
+    @extend %eventPattern;
+    }
+    
+}
+.event2{
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    grid-row-start: 3;
+    grid-row-end: 4;   
+    display: flex;
+    .bg-date{
+        background: url('/assets/img/event-02.jpg') center/cover no-repeat;
+        @extend %eventPattern;  
+    }
+
+}
+.event3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background: url('/assets/img/event-03.jpg');
+}
+.event-location{
+    display: flex;
+
+
+
+
+    
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    background-color: $white;
+    color: black;
+    padding: 25px 10px 25px 10px;
+    .event-title{
+        font-family: $roboto;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        padding-left: 20px;
+    }
+    .event_location-time{
+        font-family: $roboto;
+        color: $grey;
+        font-size: 1.2rem;
+        i{
+            margin: 0 5px;
+        }
+    }
+    button{
+        margin-left: 5px;
+    }
+}
+
+.event3{
+    @extend %centerFlex;
+    .event-location{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 90%;
+        width: 90%;
+        padding: 0 10px 35px 10px;
+    }
+    .square-date{
+        background-color: $darker-grey;
+        color: $white;
+        height: $sizeInsindeSquare;
+        width: $sizeInsindeSquare;
+        font-family: $poppins;
+        font-size: 1.8rem;
+        line-height: 1.3rem;
+        letter-spacing: 0px;
+        background-color: $darker-grey;
+        height: $sizeInsindeSquare;
+        width: $sizeInsindeSquare;
+        @extend %centerFlex;
+        .july{
+            font-family: $roboto;
+            font-size: 1.3rem;
+        }
+    }
+}

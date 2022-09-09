@@ -1,0 +1,32 @@
+@mixin forkAndSpoon {
+    height: 25px;
+    width: 25px;
+    align-self: center;
+}
+@mixin h3 {
+    font-family: $allura;
+    color: $orange-brown;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    
+}
+@mixin h4{
+    font-family: $poppins;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+@mixin avatar{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+@mixin roundDishes {
+    max-height: 70px;
+    max-width: 70px;
+    width: 25%;
+
+    border-radius: 50%;
+}

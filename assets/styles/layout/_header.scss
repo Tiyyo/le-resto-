@@ -1,0 +1,32 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: url('/assets/img/bg-slider-06.jpg') center/cover;
+    color: $white;
+    h1{
+        font-size: 3.7rem;
+        text-align: center;
+        font-family: $poppins;
+        letter-spacing: 15px;
+        line-height: 2.6rem;
+    }
+
+    .title{
+        font-family: $allura;
+        color: $orange-brown;
+        letter-spacing: 0px;
+        font-weight: 500;
+    }
+    h2{
+        font-family: $roboto;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 1.9rem;
+        letter-spacing: 8px;
+        margin-bottom: 22% ;
+    }
+}

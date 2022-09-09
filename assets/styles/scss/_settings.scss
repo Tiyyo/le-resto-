@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "Allura";
+    src: url("/assets/fonts/Allura-Regular.ttf");
+}
+@font-face{
+    font-family: "Popins";
+    src: url("/assets/fonts/Poppins-Medium.ttf");
+}
+@font-face{
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-Light.ttf");
+}
+a , a:visited, button{
+    color: $white;
+    text-decoration: none;
+    cursor: pointer;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    @extend %centerFlex;
+    background: $darker-grey-lighter;
+    font-family: $poppins;
+    flex-direction: column;
+    text-align: center;
+    width: 99vw;
+    overflow-x: hidden
+}
+.fork-and-spoon{
+    @include forkAndSpoon;
+}
