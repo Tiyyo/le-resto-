@@ -1,33 +1,40 @@
 .navbar{
     color: $white;
     width: 80%;
-    height: 150px;
+    height: 100px;
     display: flex;
     align-items: center;
+
+    
 
     .head_navbar{
         font-family: $allura;
         width: 10%;
-        font-size: 5.5em;
+        font-size: 3.2em;
         font-weight: 900;
     }
     
     .main_navbar{
     display: flex;
     font-family: $roboto;
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     justify-content: space-around;
     flex-grow: 1;
     margin: 0 25px;
     text-transform: uppercase;
+
+    @media screen and (max-width : 620px) {
+        display: none;
+    }
+    
     }
     .end_navbar{
     display: flex;
     justify-content: space-evenly;
-    width: 15%; 
+    width: 10%; 
         i{
         color: $white;
-        font-size: 1.8rem;
+        font-size: 1.0rem;
         }
     }
 }
@@ -37,7 +44,7 @@
     font-family: $roboto;
     font-size: 1rem;
     justify-content: space-around;
-    width: 45vw;
+    width: 45%;
 
     li{
         flex-grow: 1;
@@ -46,13 +53,16 @@
         border-bottom-width: 1px;
         width: fit-content;
     }
+    @media screen and (max-width : 620px){
+        width : 60%;
+    
 }
-
+}
 .nav-footer{
     display: flex;
     font-size: 1.5rem;
     justify-content: space-evenly;
-    width: 60%;
+    width: 55%;
    i{
     color: $grey;
    }

@@ -1,12 +1,15 @@
+footer{
+    width: 100vw;
+}
 .footer_quote{
     position: relative;
     border: 1px solid white;
     background-color: $white;
     color: black;
     width: 60%;
-    margin: 150px auto 400px  auto;
+    margin: 150px auto 200px  auto;
     padding: 0 30px 0px 30px;
-    height: 250px;
+    
     .avatar_footer{
         @include avatar;
         position: absolute;
@@ -20,6 +23,8 @@
         margin-top: 70px;
         font-size: 1.5rem;
         line-height: 3.0rem;
+       
+        
     }
     h5{
         margin-top: 25px;
@@ -31,6 +36,7 @@
         color: $orange-brown;
         font-family: $roboto;
         font-size: 1.2rem;
+        margin-bottom: 50px;
     }
 }
 
@@ -41,20 +47,31 @@
     height: 200px;
     color: $white;
     text-align: start;
+    
+    @media screen and (max-width : 620px){
+       background-image: none;
+    }
+
     }
     .container-60-width{
         width: 60%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
+       
+        @media screen and (max-width : 620px){
+            display: flex;
+            flex-direction: column;
+        }
     }
 .maps{
     background: url('/assets/img/gmap.jpg') center/cover;
-    width: 110%;
-    height: 500px;
+    width: 100%;
+    height: 250px;
     z-index: -1;
     position: absolute;
-    top: -500px;
+    top: -250px;
+    
 }
 .description-footer{
 padding: 50px 20px 25px 0px;
@@ -89,6 +106,16 @@ padding: 50px 20px 25px 0px;
     }
     .media-contact{
         display: flex;
+        flex-direction: row;
         align-items: baseline;
+    }
+
+    @media screen and (max-width : 620px) {
+        padding: 0;
+        margin-bottom: 50px;
+        form{
+            margin-bottom: 35px;
+        }
+        
     }
 }
