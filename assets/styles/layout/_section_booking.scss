@@ -1,7 +1,8 @@
 .booking{
     display: grid;
     grid-template-columns: 3fr 8fr;
-    width: 65%;
+    max-width: 1500px;
+    width: 70%;
     text-align: center;
     color : $white;
     align-self: center;
@@ -17,7 +18,7 @@
     .fork-and-spoon{
         margin: 20px 0;
     }
-    @media screen and (max-width : 1250px){
+    @media screen and (max-width : 1300px){
         width: 80%;
         grid-template-columns: 25% 75%; 
     }
@@ -72,6 +73,7 @@
         select{
             width: 200px;
             max-width: 80%;
+            background-color: transparent;
         }
         @media screen and (max-width : 900px)  {
             display: flex;
@@ -84,6 +86,7 @@
         height: 50px;
         width: 200px;
         max-width: 80%;
+        background-color: transparent;
 
         &::placeholder{
             padding-left: 15px;

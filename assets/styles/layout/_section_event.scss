@@ -6,7 +6,8 @@
     grid-template-columns: 57% 43%;
     column-gap: 10px;
     row-gap: 10px;
-    width: 65%;
+    width: 70%;
+    max-width: 1500px;
     margin: 25px auto;
     color: $white;
     h3{
@@ -41,7 +42,7 @@
     grid-row-end: 3;
     display: flex;
     .bg-date{
-        background: url('/assets/img/event-01.jpg') center/cover no-repeat;
+        background: url('assets/img/event-01.jpg') center/cover no-repeat;
         object-fit: fill;
     @extend %eventPattern;
     }

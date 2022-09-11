@@ -7,44 +7,119 @@
     background-color:#0e0e0e75 ;
 
 
-    @media screen and (max-width : 620px){
+    @media screen and (max-width : 768px){
         position: fixed;
         top: 0;
 
     }
-    .hamburger-ic{
-        @media screen and (max-width : 620px) {
+}
+
+
+.hamburger-ic{
+        display: none;
+        @media screen and (max-width : 768px) {
+            display: block;
             position: absolute;
+            position: relative;
             left: 20px;
-            top: 50%;
+            top: 15px;
             transform: translateY(-50%);
-            height: 25px;
-            width: 25px;
-            background: url('assets/img/hamburger-icon.png') center/cover;
+            height: 35px;
+            width: 35px;
+            color: $white;
+            background-color: transparent;
+            border: none;
+            // background: url('assets/img/hamburger-icon.png') center/cover;
+        }
+}
+.bar{
+    @media screen and (max-width : 768px){
+        display: block;
+        width: 45px;
+        height: 3px;
+        background: $white;
+        border-radius: 3px;
+        transition: all 0.1s ease-out;
+
+        &::after, &::before{
+            content: "";
+            position: absolute;
+            width: 45px;
+            height: 3px;
+            background: $white;
+            border-radius: 3px;
+            left: 0;   
+            transition: all .5s ease-in-out;
+        }
+        &::before{
+            transform: translateY(-10px);
+        }
+        &::after{
+            transform: translateY(10px)
         }
     }
-    .head_navbar{
+}
+.remove_bar{
+    @media screen and (max-width : 768px){
+        background-color: transparent;
+        width: 0px;   
+    }
+}
+.remove_bar::after{
+    transform: rotate(45deg);
+}
+.remove_bar::before{
+    transform: rotate(-45deg);
+}
+
+
+
+.head_navbar{
         font-family: $allura;
         width: 10%;
         font-size: 3.2em;
         font-weight: 900;
 
-        @media screen and (max-width : 620px){
-            margin: auto;
+        @media screen and (max-width : 768px){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
             font-size: 4.0rem;
         }
+}
 
-    }
-    .main-navbar{
+.main-navbar{
     display: flex;
     font-family: $roboto;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     justify-content: space-around;
     flex-grow: 1;
     margin: 0 25px;
     text-transform: uppercase;
+    li::after{
+        display: block;
+        content:"";
+        width: 0px;
+        height: 1px;
+        background: $white-weakest;
+        transition:width .4s ;
+    }
+    li{
+        &:hover{
+            transform: scale(1.5);
+            padding-top: 3px;
+            transition: all .4s ease-in-out;
+        }
+        }
+    
+    li:hover::after{
+        width: 100%;
+        color: red;
+    }
+    
+    @media screen and (max-width : 768px) {
 
-    @media screen and (max-width : 620px) {
         @include mobileMenu;
         display: none;
         top: 50px;
@@ -70,36 +145,40 @@
                 }
                 
             }
+
         }  
     }
-    }
+}
     
-
-    .end_navbar{
+    
+.end_navbar{
     display: flex;
     color: teal;
     justify-content: space-evenly;
     width: 10%; 
         i{
         color: $white;
-        font-size: 1.0rem;
+        font-size: 1.5rem;
         }
-        @media screen and (max-width : 620px){
+        @media screen and (max-width : 768px){
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             right: 10px;
             width: 20%;
             i{
                 font-size: 1.4rem;
             }
         }
-    }
 }
+
 
 .menu_navbar{
     display: flex;
     font-family: $roboto;
     font-size: 1rem;
     justify-content: space-around;
-    width: 45%;
+    width: 55%;
 
     li{
         flex-grow: 1;
@@ -108,8 +187,8 @@
         border-bottom-width: 1px;
         width: fit-content;
     }
-    @media screen and (max-width : 620px){
-        width : 60%;
+    @media screen and (max-width : 768px){
+        width : 80%;
     }
 }
 
@@ -126,16 +205,8 @@
 
 
 .active{
-    display: flex;
-    font-family: $roboto;
-    font-size: 0.9rem;
-    justify-content: space-around;
-    flex-grow: 1;
-    margin: 0 25px;
-    text-transform: uppercase;
-
-    @media screen and (max-width : 620px) {
-        @include mobileMenu;
+    @media screen and (max-width : 768px) {
+        // @include mobileMenu;
         display: flex;
         top: 50px;
         height: 300px;
@@ -159,6 +230,16 @@
                     margin-left: 0;
                 }
                 
+            }
+            &:hover{
+                padding-left: 15px;
+                transform: scale(1.5);
+                transition : all 0.5s ease-in-out; 
+                letter-spacing: 2px;
+
+            }
+            &::after{
+                display: none;
             }
         }  
     }
