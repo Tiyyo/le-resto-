@@ -5,7 +5,7 @@ header{
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background: url('/assets/img/bg-slider-06.jpg') center/cover;
+    background: url('assets/img/bg-slider-06.jpg') center/cover;
     object-fit: cover;
     color: $white;
     h1{
@@ -33,7 +33,7 @@ header{
     }
     @media screen and (max-width : 620px)  {
 
-            background: url('/assets/img/bg-slider-06.jpg') center/fill;
+            background: url('assets/img/bg-slider-06.jpg') center/fill;
             display: flex;
             justify-content: flex-start;
             row-gap: 70px;

@@ -57,7 +57,7 @@
     grid-row-end: 4;   
     display: flex;
     .bg-date{
-        background: url('/assets/img/event-02.jpg') center/cover no-repeat;
+        background: url('assets/img/event-02.jpg') center/cover no-repeat;
         @extend %eventPattern;  
     }
 
@@ -67,7 +67,7 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 4;
-    background: url('/assets/img/event-03.jpg');
+    background: url('assets/img/event-03.jpg');
 }
 .event-location{
     display: flex;
