@@ -1,0 +1,57 @@
+.discover{
+    display: flex;
+    width: 100vw;
+    height: 500px;
+
+    .discover_left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 2.5rem 2.5rem ;
+        background-color: $white;
+        width: 50%; 
+        outline: 1px dashed $orange-brown;
+        outline-offset: -1.5rem;
+        text-align: center;   
+        
+        .avatar_stephens{
+            img{
+            @include avatar;
+            }
+        }
+    p{
+        font-size: 1.5rem;
+    }
+    h5{
+        font-size: 1.8rem;
+    }
+    h6{
+        font-family: $roboto;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width : 920px){
+        width: 100%;
+        margin: 0;
+    }
+
+    }
+    .discover_right{
+        background: url('assets/img/store-01.jpg') center/cover;
+        border: 1px solid white;
+        width: 50vw;
+
+        @media screen and (max-width : 920px){
+            display: none;
+        }
+    }
+}
+
+h3{
+    @include h3;
+}
+h4{
+    @include h4;
+}

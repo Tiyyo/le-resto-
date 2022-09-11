@@ -1,0 +1,24 @@
+%centerFlex {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+%eventPattern{
+    height: $siezBgDateHeight;
+    width: $sizeBgDateWidth;
+    @extend %centerFlex;
+    .square-date{
+        font-family: $poppins;
+        font-size: 1.8rem;
+        line-height: 1.3rem;
+        letter-spacing: 0px;
+        background-color: $darker-grey;
+        height: $sizeInsindeSquare;
+        width: $sizeInsindeSquare;
+        @extend %centerFlex;
+        .july{
+            font-family: $roboto;
+            font-size: 1.3rem;
+        }
+    }
+}

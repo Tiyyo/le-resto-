@@ -1,0 +1,52 @@
+@mixin forkAndSpoon {
+    height: 25px;
+    width: 25px;
+    align-self: center;
+}
+@mixin h3 {
+    font-family: $allura;
+    color: $orange-brown;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    
+}
+@mixin h4{
+    font-family: $poppins;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+@mixin avatar{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+@mixin roundDishes {
+    object-fit: cover;
+    align-self: center;
+    max-height: 200px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+@mixin mobileMenu {
+    position: absolute;
+    margin: 0;
+    z-index: 50;
+    flex-direction: column;
+    font-size: 2.0rem;
+    height: 100%;
+    background : linear-gradient(0.25turn ,#0e0e0e86 70%, transparent);
+    width: 225px;
+    max-width: 50%;
+    text-align: start ;
+    padding-left: 20px;
+    font-weight: 500;
+    backdrop-filter: blur(2px);
+    transition: all 1s ease-in-out;
+
+    
+}

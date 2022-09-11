@@ -1,0 +1,124 @@
+.booking{
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    max-width: 1500px;
+    width: 70%;
+    text-align: center;
+    color : $white;
+    align-self: center;
+    min-height: fit-content;
+    margin: 100px auto 0 auto;
+    overflow: hidden;
+    
+    input, select, button{
+        border: 0;
+        border-bottom: 1px solid black;
+    }
+
+    .fork-and-spoon{
+        margin: 20px 0;
+    }
+    @media screen and (max-width : 1300px){
+        width: 80%;
+        grid-template-columns: 25% 75%; 
+    }
+
+    @media screen and (max-width : 1100px)  {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.time-open{
+    background-color: black;
+    padding: 20px;
+    outline: dashed 1px $orange-brown;
+    outline-offset: -10px;
+    object-fit: fill;
+    .special{
+        h3{
+            margin-top: 15px;
+            @include h3;
+            text-transform: capitalize;
+        }
+    } 
+    h3{
+        font-family: $poppins;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        line-height: 1.0rem;
+        line-height: 6rem;
+    }
+    p{
+        font-weight: 200;
+        font-family: $roboto;
+    }
+
+}
+.reservation{
+    background-color: $white;
+    color: black;
+    padding: 20px 30px;
+
+    .form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        column-gap: 15px;
+
+       
+        
+        #nombre{
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        select{
+            width: 200px;
+            max-width: 80%;
+            background-color: transparent;
+        }
+        @media screen and (max-width : 900px)  {
+            display: flex;
+            flex-direction: column;
+            align-items: center;        
+            }
+        }
+    }
+    input{
+        height: 50px;
+        width: 200px;
+        max-width: 80%;
+        background-color: transparent;
+
+        &::placeholder{
+            padding-left: 15px;
+        }
+    }
+    #email{
+        width: 200px;
+        max-width: 80%;
+    }
+
+.btn_reservation{
+    width: 27%;
+    height: 40px;
+    min-width: 150px;
+    margin: 50px 0 25px 0;
+    border: 0;
+    color: $white;
+    background-color: black;
+    border-radius: 5.0rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    &:hover{
+        transform: scale(1.1);
+        transition: all 1s ease-in-out;
+        color: $orange-brown;
+    }
+    @media screen and (max-width : 940px)  {
+        width: 50%;;
+    }
+
+    
+    
+}
