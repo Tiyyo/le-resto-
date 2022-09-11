@@ -12,3 +12,20 @@ icBurger.addEventListener('click',() => {
 })
 }
 activeMenu();
+
+
+// rotate button 
+
+function spinButton(){
+    const icon = document.querySelectorAll("i");
+
+    icon.forEach((icon) =>{
+        icon.addEventListener('click', (e) => {
+            let spin = icon.classList.add('spin_btn')
+            setTimeout ( () => {
+                icon.classList.remove('spin_btn')
+            } , 2000 )
+        })
+    }) 
+}
+spinButton()
