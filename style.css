@@ -69,6 +69,7 @@ body {
 }
 
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,7 +99,7 @@ header h2 {
   font-family: "Roboto";
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.3rem;
   letter-spacing: 5px;
   margin-bottom: 23%;
 }
@@ -107,7 +108,8 @@ header h2 {
     background: url("assets/img/bg-slider-06.jpg") center/fill;
     display: flex;
     justify-content: flex-start;
-    row-gap: 70px;
+    row-gap: 50px;
+    padding-top: 100px;
   }
   header h1 {
     margin-top: 100px;
@@ -211,6 +213,7 @@ h4 {
 @media screen and (max-width: 740px) {
   .menu_dishes {
     grid-template-columns: 1fr;
+    width: 80%;
   }
 }
 
@@ -274,6 +277,7 @@ h4 {
 }
 @media screen and (max-width: 1250px) {
   .booking {
+    width: 80%;
     grid-template-columns: 25% 75%;
   }
 }
@@ -328,33 +332,42 @@ h4 {
   grid-column-start: 1;
   grid-column-end: 2;
 }
+.reservation .form select {
+  width: 200px;
+  max-width: 80%;
+}
 @media screen and (max-width: 900px) {
   .reservation .form {
     display: flex;
     flex-direction: column;
-  }
-  .reservation .form select {
-    width: 50%;
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content;
+    align-items: center;
   }
 }
-.reservation input {
+
+input {
   height: 50px;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+  width: 200px;
+  max-width: 80%;
 }
-.reservation #email {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+input::-moz-placeholder {
+  padding-left: 15px;
+}
+input:-ms-input-placeholder {
+  padding-left: 15px;
+}
+input::placeholder {
+  padding-left: 15px;
+}
+
+#email {
+  width: 200px;
+  max-width: 80%;
 }
 
 .btn_reservation {
   width: 27%;
   height: 40px;
+  min-width: 150px;
   margin: 50px 0 25px 0;
   border: 0;
   color: #ffffff;
@@ -510,6 +523,11 @@ footer {
   margin: 150px auto 200px auto;
   padding: 0 30px 0px 30px;
 }
+@media screen and (max-width: 740px) {
+  .footer_quote {
+    width: 80%;
+  }
+}
 .footer_quote .avatar_footer {
   height: 70px;
   width: 70px;
@@ -631,10 +649,28 @@ footer {
 
 .navbar {
   color: #ffffff;
-  width: 80%;
-  height: 100px;
+  width: 100%;
+  height: 50px;
   display: flex;
   align-items: center;
+  background-color: rgba(14, 14, 14, 0.4588235294);
+}
+@media screen and (max-width: 620px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .navbar .hamburger-ic {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background: url("assets/img/hamburger-icon.png") center/cover;
+  }
 }
 .navbar .head_navbar {
   font-family: "Allura";
@@ -642,7 +678,13 @@ footer {
   font-size: 3.2em;
   font-weight: 900;
 }
-.navbar .main_navbar {
+@media screen and (max-width: 620px) {
+  .navbar .head_navbar {
+    margin: auto;
+    font-size: 4rem;
+  }
+}
+.navbar .main-navbar {
   display: flex;
   font-family: "Roboto";
   font-size: 0.9rem;
@@ -652,18 +694,79 @@ footer {
   text-transform: uppercase;
 }
 @media screen and (max-width: 620px) {
-  .navbar .main_navbar {
+  .navbar .main-navbar {
+    position: absolute;
+    margin: 0;
+    z-index: 50;
+    flex-direction: column;
+    font-size: 2rem;
+    height: 100%;
+    background: linear-gradient(0.25turn, rgba(14, 14, 14, 0.5254901961) 70%, transparent);
+    width: 225px;
+    max-width: 50%;
+    text-align: start;
+    padding-left: 20px;
+    font-weight: 500;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    transition: 0.3s ease-in-out;
     display: none;
+    top: 50px;
+    height: 300px;
+    left: 0px;
+  }
+  .navbar .main-navbar li {
+    max-width: 50%;
+    -webkit-animation: animTextNav ease-in-out 1s forwards;
+            animation: animTextNav ease-in-out 1s forwards;
+  }
+  @-webkit-keyframes animTextNav {
+    0% {
+      opacity: 0;
+      margin-left: -225px;
+    }
+    75% {
+      opacity: 0.5;
+      margin-left: 25px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  @keyframes animTextNav {
+    0% {
+      opacity: 0;
+      margin-left: -225px;
+    }
+    75% {
+      opacity: 0.5;
+      margin-left: 25px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
   }
 }
 .navbar .end_navbar {
   display: flex;
+  color: teal;
   justify-content: space-evenly;
   width: 10%;
 }
 .navbar .end_navbar i {
   color: #ffffff;
   font-size: 1rem;
+}
+@media screen and (max-width: 620px) {
+  .navbar .end_navbar {
+    right: 10px;
+    width: 20%;
+  }
+  .navbar .end_navbar i {
+    font-size: 1.4rem;
+  }
 }
 
 .menu_navbar {
@@ -696,4 +799,70 @@ footer {
 }
 .nav-footer i {
   color: #b6b6b6;
+}
+
+.active {
+  display: flex;
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  justify-content: space-around;
+  flex-grow: 1;
+  margin: 0 25px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 620px) {
+  .active {
+    position: absolute;
+    margin: 0;
+    z-index: 50;
+    flex-direction: column;
+    font-size: 2rem;
+    height: 100%;
+    background: linear-gradient(0.25turn, rgba(14, 14, 14, 0.5254901961) 70%, transparent);
+    width: 225px;
+    max-width: 50%;
+    text-align: start;
+    padding-left: 20px;
+    font-weight: 500;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    transition: 0.3s ease-in-out;
+    display: flex;
+    top: 50px;
+    height: 300px;
+    left: 0px;
+  }
+  .active li {
+    max-width: 50%;
+    -webkit-animation: animTextNav ease-in-out 1s forwards;
+            animation: animTextNav ease-in-out 1s forwards;
+  }
+  @-webkit-keyframes animTextNav {
+    0% {
+      opacity: 0;
+      margin-left: -225px;
+    }
+    75% {
+      opacity: 0.5;
+      margin-left: 25px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  @keyframes animTextNav {
+    0% {
+      opacity: 0;
+      margin-left: -225px;
+    }
+    75% {
+      opacity: 0.5;
+      margin-left: 25px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
 }/*# sourceMappingURL=style.css.map */

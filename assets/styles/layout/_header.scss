@@ -1,4 +1,5 @@
 header{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,6 +9,7 @@ header{
     background: url('assets/img/bg-slider-06.jpg') center/cover;
     object-fit: cover;
     color: $white;
+    
     h1{
         font-size: 4rem;
         text-align: center;
@@ -27,7 +29,7 @@ header{
         font-family: $roboto;
         font-weight: 300;
         text-transform: uppercase;
-        font-size: 1.0rem;
+        font-size: 1.3rem;
         letter-spacing: 5px;
         margin-bottom: 23% ;
     }
@@ -36,7 +38,8 @@ header{
             background: url('assets/img/bg-slider-06.jpg') center/fill;
             display: flex;
             justify-content: flex-start;
-            row-gap: 70px;
+            row-gap: 50px;
+            padding-top: 100px;
 
             h1{
                 margin-top: 100px;

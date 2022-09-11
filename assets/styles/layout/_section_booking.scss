@@ -18,6 +18,7 @@
         margin: 20px 0;
     }
     @media screen and (max-width : 1250px){
+        width: 80%;
         grid-template-columns: 25% 75%; 
     }
 
@@ -61,31 +62,42 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr ;
         column-gap: 15px;
+
+       
         
         #nombre{
             grid-column-start: 1;
             grid-column-end: 2;
         }
+        select{
+            width: 200px;
+            max-width: 80%;
+        }
         @media screen and (max-width : 900px)  {
             display: flex;
             flex-direction: column;
-            select{
-                width: 50%;
-                max-width: max-content;
+            align-items: center;        
             }
         }
     }
     input{
         height: 50px;
-        max-width: max-content;
+        width: 200px;
+        max-width: 80%;
+
+        &::placeholder{
+            padding-left: 15px;
+        }
     }
     #email{
-        max-width: max-content;
+        width: 200px;
+        max-width: 80%;
     }
-}
+
 .btn_reservation{
     width: 27%;
     height: 40px;
+    min-width: 150px;
 
     @media screen and (max-width : 940px)  {
         width: 50%;;

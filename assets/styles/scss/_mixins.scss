@@ -30,3 +30,22 @@
 
     border-radius: 50%;
 }
+
+@mixin mobileMenu {
+    position: absolute;
+    margin: 0;
+    z-index: 50;
+    flex-direction: column;
+    font-size: 2.0rem;
+    height: 100%;
+    background : linear-gradient(0.25turn ,#0e0e0e86 70%, transparent);
+    width: 225px;
+    max-width: 50%;
+    text-align: start ;
+    padding-left: 20px;
+    font-weight: 500;
+    backdrop-filter: blur(2px);
+    transition: 0.3s ease-in-out;
+
+    
+}

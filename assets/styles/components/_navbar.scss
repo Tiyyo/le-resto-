@@ -1,20 +1,41 @@
 .navbar{
     color: $white;
-    width: 80%;
-    height: 100px;
+    width: 100%;
+    height: 50px;
     display: flex;
     align-items: center;
+    background-color:#0e0e0e75 ;
 
-    
 
+    @media screen and (max-width : 620px){
+        position: fixed;
+        top: 0;
+
+    }
+    .hamburger-ic{
+        @media screen and (max-width : 620px) {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 25px;
+            width: 25px;
+            background: url('assets/img/hamburger-icon.png') center/cover;
+        }
+    }
     .head_navbar{
         font-family: $allura;
         width: 10%;
         font-size: 3.2em;
         font-weight: 900;
+
+        @media screen and (max-width : 620px){
+            margin: auto;
+            font-size: 4.0rem;
+        }
+
     }
-    
-    .main_navbar{
+    .main-navbar{
     display: flex;
     font-family: $roboto;
     font-size: 0.9rem;
@@ -24,17 +45,51 @@
     text-transform: uppercase;
 
     @media screen and (max-width : 620px) {
+        @include mobileMenu;
         display: none;
+        top: 50px;
+        height: 300px;
+        left: 0px;
+
+        li{
+            max-width: 50%;
+            animation: animTextNav ease-in-out 1s forwards;
+            
+            @keyframes animTextNav {
+                0%{
+                    opacity: 0;
+                    margin-left: -225px;
+                }
+                75%{
+                    opacity: 0.5;
+                    margin-left: 25px;
+                }
+                100%{
+                    opacity: 1;
+                    margin-left: 0;
+                }
+                
+            }
+        }  
+    }
     }
     
-    }
+
     .end_navbar{
     display: flex;
+    color: teal;
     justify-content: space-evenly;
     width: 10%; 
         i{
         color: $white;
         font-size: 1.0rem;
+        }
+        @media screen and (max-width : 620px){
+            right: 10px;
+            width: 20%;
+            i{
+                font-size: 1.4rem;
+            }
         }
     }
 }
@@ -55,9 +110,10 @@
     }
     @media screen and (max-width : 620px){
         width : 60%;
-    
+    }
 }
-}
+
+
 .nav-footer{
     display: flex;
     font-size: 1.5rem;
@@ -67,3 +123,43 @@
     color: $grey;
    }
 }
+
+
+.active{
+    display: flex;
+    font-family: $roboto;
+    font-size: 0.9rem;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin: 0 25px;
+    text-transform: uppercase;
+
+    @media screen and (max-width : 620px) {
+        @include mobileMenu;
+        display: flex;
+        top: 50px;
+        height: 300px;
+        left: 0px;
+
+        li{
+            max-width: 50%;
+            animation: animTextNav ease-in-out 1s forwards;
+            
+            @keyframes animTextNav {
+                0%{
+                    opacity: 0;
+                    margin-left: -225px;
+                }
+                75%{
+                    opacity: 0.5;
+                    margin-left: 25px;
+                }
+                100%{
+                    opacity: 1;
+                    margin-left: 0;
+                }
+                
+            }
+        }  
+    }
+    }
