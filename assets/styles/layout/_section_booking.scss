@@ -101,12 +101,6 @@
     width: 27%;
     height: 40px;
     min-width: 150px;
-
-    @media screen and (max-width : 940px)  {
-        width: 50%;;
-    }
-
-    
     margin: 50px 0 25px 0;
     border: 0;
     color: $white;
@@ -115,4 +109,16 @@
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    
+    &:hover{
+        transform: scale(1.1);
+        transition: all 1s ease-in-out;
+        color: $orange-brown;
+    }
+    @media screen and (max-width : 940px)  {
+        width: 50%;;
+    }
+
+    
+    
 }
